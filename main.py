@@ -37,7 +37,6 @@ def getpath(path: str) -> str:
 JB_DES_TXT = Path("Job_description/AI.txt").read_text(encoding="utf-8")
 LLM_RESUME = ChatOpenAI(model="gpt-4o-mini")
 PROMPT_RESUME_TMPL = ChatPromptTemplate.from_template(getpath("prompt/to_json_pmt.txt"))
-PROMPT_JOB = ChatPromptTemplate.from_template(getpath("prompt/job_des_pmt.txt"))
 LLM_HR = ChatOpenAI(model="gpt-5-mini")
 PROMPT_HR_TMPL = ChatPromptTemplate.from_template(getpath("prompt/hr_pmt.txt"))
 

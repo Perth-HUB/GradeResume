@@ -1,4 +1,4 @@
-# HRAI
+# GradeResume
 1. สร้าง uv และ sync library
 ```bash
 pip install uv
