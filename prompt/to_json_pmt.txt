@@ -1,0 +1,23 @@
+Use the information below to extract a Resume JSON that strictly matches the schema.
+INFORMATION (verbatim source; do NOT infer beyond this):
+{text}
+------------------
+Return:
+- ONE valid JSON object ONLY (no prose, no comments, no markdown fences).
+- Must match the schema EXACTLY (no extra/missing fields, correct types).
+
+Hard Rules (strict, no exceptions):
+1 NO GUESSING, NO FABRICATION, NO REWRITING FACTS.
+- Only include data explicitly present in INFORMATION.
+- If a value is uncertain/implicit/inferred treat as missing.
+2 Do NOT transform or enrich content beyond minimal cleaning.
+- Allowed: trim whitespace.
+- Not allowed: paraphrasing, translating, normalizing entities, adding defaults not seen in source.
+3 No extra fields beyond the schema. Arrays may be empty.
+4 If contradictory values appear, prefer the one stated most explicitly (e.g., in structured headers). Do NOT merge or invent resolutions; if still ambiguous treat as missing.
+
+Validation checklist BEFORE returning:
+- JSON parses successfully.
+- Keys and types match the schema exactly.
+- No prose or markdown fences.
+- No inferred/guessed values.
